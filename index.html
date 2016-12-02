@@ -11,12 +11,17 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400i" rel="stylesheet">
 </head>
 <body>
+  <ul class="skip-links">
+    <li><a href="#main">Jump to the main content</a></li>
+    <li><a href="#nav">Jump to the navigation</a></li>
+  </ul>
+
   <header role="banner">
     <div class="masthead">
       <div class="wrapper pad-t-1-2 pad-b-1-2 gutter-1-2">
         <h1 class="push-0">Shrubbery, etc.</h1>
       </div>
-      <nav role="navigation" class="nav">
+      <nav role="navigation" class="nav" id="nav">
         <div class="wrapper gutter-1-2">
           <ol class="mega list-group-inline push-0">
             <li><a href="#about">About</a></li>
@@ -30,7 +35,7 @@
     </div>
   </header>
 
-  <main role="main">
+  <main role="main" id="main">
     <div>
       <div class="about push" id="about">
         <div class="embed embed-24by10">
@@ -46,8 +51,8 @@
       </div>
     </div>
 
-    <div>
-      <div class="wrapper gutter-1-2" id="shrubs">
+    <section id="shrubs">
+      <div class="wrapper gutter-1-2">
         <h2 class="push-0 color-brand-dark">Products</h2>
         <p class="mega max-length">If you do not tell us where we can buy a shrubbery, my friend and I will say… we will say… “nee”.</p>
         <ul class="grid list-group skip-links">
@@ -74,37 +79,38 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
     <section class="prices pad-t pad-b" id="prices">
       <div class="wrapper gutter-1-2">
         <h2 class="push-0 color-brand-dark">Prices</h2>
 
         <table>
-          <captionclass="mega max-length">Even those who arrange and design shrubberies are under considerable economic stress at this period in history.</caption>
+          <caption class="mega max-length">Even those who arrange and design shrubberies are under considerable economic stress at this period in history.</caption>
           <thead>
             <tr>
-              <td>
-              </td>
-              <td>Small</td>
-              <td>Medium</td>
-              <td>Large</td>
+              <th scope="col">
+              </th>
+              <th scope="col">Small</th>
+              <th scope="col">Medium</th>
+              <th scope="col">Large</th>
             </tr>
+          </thead>
           <tbody>
             <tr>
-              <td>Grassy shrubs</td>
+              <th scope="row">Grassy shrubs</th>
               <td>$10</td>
               <td>$20</td>
               <td>$30</td>
             </tr>
             <tr>
-              <td>Shrubs with laurels</td>
+              <th scope="row">Shrubs with laurels</th>
               <td>$40</td>
               <td>$70</td>
               <td>$100</td>
             </tr>
             <tr>
-              <td>Two-level shrubbery</td>
+              <th scope="row">Two-level shrubbery</th>
               <td>$50</td>
               <td>$70</td>
               <td>$90</td>
@@ -114,7 +120,7 @@
       </div>
     </section>
 
-    <div class="news pad-t pad-b" id="news">
+    <section class="news pad-t pad-b" id="news">
       <div class="wrapper gutter-1-2">
         <h2 class="push-0 color-brand-dark">News</h2>
         <p class="mega max-length">Then, when you have found the shrubbery, you must cut down the mightiest tree in the forest… with… a herring!</p>
@@ -134,7 +140,7 @@
           </li>
         </ol>
       </div>
-    </div>
+    </section>
 
     <div class="contact pad-t pad-b" id="contact">
       <div class="wrapper">
@@ -143,12 +149,12 @@
 
         <form class="grid" method="post">
           <div class="unit [ xs-1 s-1 m-1-2 l-1-3 ] push gutter-1-2">
-            <span class="push-1-8">Your name</span>
-            <input>
+            <label for="name" class="push-1-8">Your name</label>
+            <input id="name">
           </div>
           <div class="unit [ xs-1 s-1 m-1-2 l-1-3 ] push gutter-1-2">
-            <span class="push-1-8">E-mail address</span>
-            <input>
+            <label for="email" class="push-1-8">E-mail address</label>
+            <input id="email" type="email">
           </div>
           <div class="unit [ xs-1 s-1 m-1-2 l-1-3 ] push gutter-1-2">
             <span class="push-1-8">Type of shrubbery</span>
