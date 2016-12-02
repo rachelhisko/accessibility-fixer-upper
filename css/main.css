@@ -18,10 +18,6 @@ a:hover {
   color: #113c00;
 }
 
-a:focus {
-  outline: 3px solid #000;
-}
-
 .max-length {
   margin-left: 0;
   margin-right: 0;
@@ -47,13 +43,13 @@ a:focus {
   text-decoration: none;
 }
 
+.nav a:focus {
+  outline: 3px solid #000;
+}
+
 .nav a:hover {
   background-color: #fff;
   color: #113c00;
-}
-
-nav:focus {
-  outline: 3px solid #000;
 }
 
 .about {
